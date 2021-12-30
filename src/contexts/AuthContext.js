@@ -15,8 +15,8 @@ export const AuthProvider = (props) => {
   useEffect(() => {
     auth.onAuthStateChanged((user) => {
       setUser(user);
-      setLoading(false);
       if (user) history.push('/chats');
+      setLoading(false);
     });
   }, [user, history]);
 
